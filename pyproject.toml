@@ -1,0 +1,31 @@
+# pyproject.toml
+
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blast_api_client"
+version = "0.0.1"
+description = "API client for blast."
+readme = "README.md"
+authors = [{ name = "Peter McGill", email = "pemcgill@ucsc.edu" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["blast", "api", "tutorial"]
+dynamic = ["dependencies"]
+
+requires-python = ">=3.9"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Homepage = "https://github.com/astrophpeter/blast_api_client"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
